@@ -76,7 +76,9 @@ const CourseTable = () => {
                                 <TdEdit action={updateDepartment} globalStateUpdate={globalStateUpdate} tdType={'totalSeat'} updateReset={UPDATE_DEPT_RESET} id={course._id}>
                                     {course.totalSeat}
                                 </TdEdit>
-                                <td>{course.seatAvail}</td>
+                                <TdEdit action={updateDepartment} globalStateUpdate={globalStateUpdate} tdType={'seatAvail'} updateReset={UPDATE_DEPT_RESET} id={course._id}>
+                                    {course.seatAvail}
+                                </TdEdit>
                                 <td>
                                     <Image
                                         src={course.deptPic}

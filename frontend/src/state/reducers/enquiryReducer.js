@@ -1,4 +1,4 @@
-import { ALL_ENQUIRY_FAIL, ALL_ENQUIRY_REQUEST, ALL_ENQUIRY_SUCCESS, ENQUIRY_COUNT_FAIL, ENQUIRY_COUNT_REQUEST, ENQUIRY_COUNT_SUCCESS, NEW_ENQUIRY_FAIL, NEW_ENQUIRY_REQUEST, NEW_ENQUIRY_SUCCESS, UPDATE_ENQUIRY_FAIL, UPDATE_ENQUIRY_REQUEST, UPDATE_ENQUIRY_RESET, UPDATE_ENQUIRY_SUCCESS } from "../constants/enquiryConstant";
+import { ALL_ENQUIRY_FAIL, ALL_ENQUIRY_REQUEST, ALL_ENQUIRY_SUCCESS, ENQUIRY_COUNT_FAIL, ENQUIRY_COUNT_REQUEST, ENQUIRY_COUNT_SUCCESS, NEW_ENQUIRY_FAIL, NEW_ENQUIRY_REQUEST, NEW_ENQUIRY_RESET, NEW_ENQUIRY_SUCCESS, UPDATE_ENQUIRY_FAIL, UPDATE_ENQUIRY_REQUEST, UPDATE_ENQUIRY_RESET, UPDATE_ENQUIRY_SUCCESS } from "../constants/enquiryConstant";
 
 
 export const enquiryReducer=(state={enquiries:[]},action)=>{
@@ -46,6 +46,13 @@ export const newEnquiryReducer=(state={},action)=>{
                 error:action.payload
             }
             break;
+        case NEW_ENQUIRY_RESET:
+            return {
+                loading:false,
+                error:undefined,
+                success:undefined
+            }
+            break; 
         default :
             return state;
         

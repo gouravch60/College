@@ -5,7 +5,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { newEnquiry } from '../../state/actions/enquiryAction';
+import { toast } from 'react-toastify';
 import Image from 'react-bootstrap/esm/Image';
+import { NEW_ENQUIRY_RESET } from '../../state/constants/enquiryConstant';
 
 function DeptModal({departments,deptSelected}) {
 const dispatch=useDispatch();
@@ -33,7 +35,17 @@ const dispatch=useDispatch();
  
   let {success,error,loading} = useSelector(globalState=>globalState.newEnquiry)
   useEffect(()=>{
-    
+    if(success){
+        toast.success("Enquiry submitted successfully");
+        setName("");
+        setCourse("");
+        setEmail("");
+        setPhone("");
+        dispatch({type:NEW_ENQUIRY_RESET});
+    }
+    if(error){
+        toast.error(error);
+    }
   },[dispatch,success,error])
 
   const handleChange=(e)=>{
@@ -70,7 +82,7 @@ const dispatch=useDispatch();
                 <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
                     <h5 class="modal-title" id="deptModalLabel">Send Enquiry</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form onSubmit={submitEnquiry}>
                     <div class="modal-body row">

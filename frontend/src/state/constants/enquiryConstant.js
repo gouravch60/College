@@ -2,9 +2,10 @@ export const ALL_ENQUIRY_REQUEST = "Fetch all enquiry request"
 export const ALL_ENQUIRY_SUCCESS = "Fetch all enquiry success"
 export const ALL_ENQUIRY_FAIL = "Fetch all enquiry fail"
 
-export const NEW_ENQUIRY_REQUEST = "Fetch new enquiry request"
-export const NEW_ENQUIRY_SUCCESS = "Fetch new enquiry success"
-export const NEW_ENQUIRY_FAIL = "Fetch new enquiry fail"
+export const NEW_ENQUIRY_REQUEST = "New enquiry request"
+export const NEW_ENQUIRY_SUCCESS = "New enquiry success"
+export const NEW_ENQUIRY_FAIL = "New enquiry fail"
+export const NEW_ENQUIRY_RESET    = "New enquiry reset"
 
 export const UPDATE_ENQUIRY_REQUEST = "Update enquiry request"
 export const UPDATE_ENQUIRY_SUCCESS = "Update enquiry success"
