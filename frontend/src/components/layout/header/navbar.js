@@ -10,7 +10,7 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const NavbarComponent=()=>{
     return(
-      <Navbar collapseOnSelect expand="lg" data-bs-theme="dark" className="bg-body-tertiary fixed-top">
+      <Navbar collapseOnSelect expand="lg" data-bs-theme="dark" className="bg-body-tertiary fixed-top" style={{width:'100vh'}}>
       <Container>
         <Navbar.Brand><img src='/logo.png' className='logo' /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
