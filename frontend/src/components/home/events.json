@@ -1,0 +1,54 @@
+[
+    {
+        "_id": "655f8904cdd95514e7cbe2a8",
+        "title": "Drawing Competition",
+        "description": "Come and participate in drawing competition. Entry fee 100 Rs.",
+        "images": "https://staugustineschoolcom.files.wordpress.com/2021/12/pp.jpg?w=1400",
+        "regLinkFlag": "N",
+        "regLink": "https://www.google.com/?&bih=657&biw=1366&hl=en",
+        "eventDate": "2023-12-14T21:54:00.000Z",
+        "eventStartTime": "9:00 AM",
+        "eventendTime": "12:00 PM",
+        "createdAt": "2023-11-23T17:16:52.469Z",
+        "__v": 0
+    },
+    {
+        "_id": "655f899acdd95514e7cbe2aa",
+        "title": "Singing Competition",
+        "description": "Come and participate in singing competition. Entry fee 100 Rs.",
+        "images": "https://tarang.radiomadhuban.in/wp-content/uploads/2021/12/cropped-unnamed-2-1.jpg",
+        "regLinkFlag": "N",
+        "regLink": "https://www.google.com/?&bih=657&biw=1366&hl=en",
+        "eventDate": "2023-11-30T21:54:00.000Z",
+        "eventStartTime": "10:00 AM",
+        "eventendTime": "01:00 PM",
+        "createdAt": "2023-11-23T17:19:22.368Z",
+        "__v": 0
+    },
+    {
+        "_id": "655f8a7dcdd95514e7cbe2ac",
+        "title": "Leadership Workshop",
+        "description": "Discover a wide range of leadership training topics to develop emerging leaders.",
+        "images": "https://leadingbyexamplellc.com/wp-content/uploads/2018/12/event-leadership-workshop.jpg",
+        "regLinkFlag": "N",
+        "regLink": "https://www.google.com/?&bih=657&biw=1366&hl=en",
+        "eventDate": "2024-01-03T21:54:00.000Z",
+        "eventStartTime": "10:00 AM",
+        "eventendTime": "01:00 PM",
+        "createdAt": "2023-11-23T17:23:09.226Z",
+        "__v": 0
+    },
+    {
+        "_id": "655f8b7bcdd95514e7cbe2af",
+        "title": "Piano Workshop",
+        "description": "Fully immerse yourself in piano, keyboard, and Hammond organ performance. Develop your skills in improvisation, performance, chord theory.",
+        "images": "https://www.academyofmusik.com/wp-content/uploads/2023/10/Screen-Shot-2023-10-08-at-12.19.10-AM.png",
+        "regLinkFlag": "N",
+        "regLink": "https://www.google.com/?&bih=657&biw=1366&hl=en",
+        "eventDate": "2024-01-03T21:54:00.000Z",
+        "eventStartTime": "09:00 AM",
+        "eventendTime": "04:00 PM",
+        "createdAt": "2023-11-23T17:27:23.948Z",
+        "__v": 0
+    }
+]

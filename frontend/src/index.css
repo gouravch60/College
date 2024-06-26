@@ -1,0 +1,104 @@
+.text-heading{
+  font-family: 'MS Reference Sans Serif';
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.heading-underline{
+  font-family: 'MS Reference Sans Serif';
+  font-weight: bolder;
+  opacity: 0.9;
+
+
+}
+
+.text-black{
+  opacity: 0.9;
+  color: black;
+}
+
+.icon-container{
+  border-radius: 50%;
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+}
+.icon-container FontAwesomeIcon{
+  margin-top: 50%;
+}
+
+nav{
+  position: static;
+}
+.card-hover{
+  transition: 0.5s;
+}
+.card-hover:hover{
+  transform: scale(1.05);
+  
+}
+
+.bg-gray-100{
+  background-color: #f8f9fa;
+}
+.bg-gray-200{
+  background-color: #e9ecef;
+}
+
+.hover-pointer:hover{
+  cursor: pointer; 
+  opacity: 0.9;
+}
+
+/* Add this to your CSS file or style block */
+.custom-card {
+  position: relative;
+}
+
+.delete-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  display: none; /* Initially hide the delete icon container */
+}
+
+.custom-card:hover .delete-icon-container {
+  display: flex; /* Show the delete icon container on hover */
+}
+
+.delete-icon {
+  color: red; /* Set the desired color for the delete icon */
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.text-description{
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.bg-orange{
+  background-color: #ff6e01;
+}
+
+.transparency-80{
+  opacity:0.8;
+}
+
+.secondary-link{
+  text-decoration: none;
+  color:rgb(99, 98, 98);
+}
+.secondary-link:hover{
+  color:#adafb1;
+  text-decoration: underline;
+}
+.logo{
+  height: 40px;
+  width: auto;
+}
