@@ -15,7 +15,7 @@ require('./config/dbconnection')
 
 app.use(cors({
     credentials: true
-    ,origin:'http://localhost:3000'
+    ,origin:'https://college-9yaq.onrender.com'
 }));
 
 const departmentRoute=require('./routes/departmentRoute')
