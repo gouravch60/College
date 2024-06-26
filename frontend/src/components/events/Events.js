@@ -4,6 +4,7 @@ import { getAllEvents } from "../../state/actions/eventAction";
 import PageHero from "../layout/header/pageHero";
 import Card from 'react-bootstrap/Card';
 import EventModal from "../snippets/eventModal";
+import { url } from "../../config";
 
 const Events=(props)=>{
     let [eventSelected,setEventSelected]=useState('');
@@ -45,7 +46,7 @@ const Events=(props)=>{
                     <div className="card col-12 mt-3 shadow card-hover" onClick={()=>setEventSelected(eventItem)} data-bs-toggle="modal" data-bs-target="#eventModal">
                         <div className="card-body row">
                             <div className="col-md-4">
-                                <img src={eventItem.images} className="w-100 img-fluid" style={{height:'20rem'}}/>
+                                <img src={url+eventItem.images} className="w-100 img-fluid" style={{height:'20rem'}}/>
                             </div>
                             <div className="col-md-8">
                                 <span className="text-success h5">{formatDateToDayMonth(eventItem.eventDate)}</span><br/>

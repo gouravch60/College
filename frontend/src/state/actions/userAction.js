@@ -1,10 +1,11 @@
 import { LOAD_USER_FAIL, LOAD_USER_REQUEST, LOAD_USER_SUCCESS, LOGIN_USER_FAIL, LOGIN_USER_REQUEST, LOGIN_USER_SUCCESS, LOGOUT_USER_REQUEST, LOGOUT_USER_SUCCESS } from "../constants/userConstant";
 import axios from 'axios'
+import { url } from "../../config";
 
 
 export const loginUser=(data)=>dispatch=>{
     dispatch({type:LOGIN_USER_REQUEST});
-    let link ="/api/v1/login";
+    let link =url+"/api/v1/login";
     const config = {
         headers: { "Content-Type": "application/json" },
         withCredentials: true
@@ -18,7 +19,7 @@ export const loginUser=(data)=>dispatch=>{
 
 export const loadUser=()=>dispatch=>{
     dispatch({type:LOAD_USER_REQUEST});
-    let link ="/api/v1/user/loadUser";
+    let link =url+"/api/v1/user/loadUser";
     const config = {
         headers: { "Content-Type": "application/json" },
         withCredentials: true
@@ -34,7 +35,7 @@ export const loadUser=()=>dispatch=>{
 
 export const logoutUser=()=>dispatch=>{
     dispatch({type:LOGOUT_USER_REQUEST});
-    let link ="/api/v1/user/logout";
+    let link =url+"/api/v1/user/logout";
     const config = {
         headers: { "Content-Type": "application/json" },
         withCredentials: true

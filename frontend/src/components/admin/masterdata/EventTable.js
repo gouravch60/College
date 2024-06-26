@@ -8,6 +8,7 @@ import DeleteEventDialog from './deleteDialogs/DeleteEventDialog';
 import { UPDATE_EVENT_RESET } from '../../../state/constants/eventConstant';
 import TdEdit from './TdEdit';
 import UpEventImgModal from './updateImgModals/UpEventImgModal';
+import { url } from '../../../config';
 
 const EventTable = () => {
     const dispatch = useDispatch();
@@ -89,7 +90,7 @@ const EventTable = () => {
                                 </TdEdit>
                                 <td>
                                     <Image
-                                        src={event.images}
+                                        src={url+event.images}
                                         alt={`${event.title} Event`}
                                         style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '50%', cursor: 'pointer' }}
                                         data-bs-toggle="modal" data-bs-target="#eventPicModal"

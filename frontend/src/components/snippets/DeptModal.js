@@ -8,6 +8,7 @@ import { newEnquiry } from '../../state/actions/enquiryAction';
 import { toast } from 'react-toastify';
 import Image from 'react-bootstrap/esm/Image';
 import { NEW_ENQUIRY_RESET } from '../../state/constants/enquiryConstant';
+import { url } from "../../config";
 
 function DeptModal({departments,deptSelected}) {
 const dispatch=useDispatch();
@@ -87,7 +88,7 @@ const dispatch=useDispatch();
                 <form onSubmit={submitEnquiry}>
                     <div class="modal-body row">
                         <div className="col-md-6 p-3 text-center">
-                            <Image src={coursePic} style={{height:'80px',width:'80px',borderRadius:'100%'}}/>
+                            <Image src={url+coursePic} style={{height:'80px',width:'80px',borderRadius:'100%'}}/>
                             <h5>{course}</h5>
                             <hr/>
                             <p className='mt-2 text-description'>

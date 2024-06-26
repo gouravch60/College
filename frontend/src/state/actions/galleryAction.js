@@ -1,14 +1,15 @@
 import axios from "axios";
 import { ALL_GALLERY_REQUEST,ALL_GALLERY_SUCCESS,ALL_GALLERY_FAIL, NEW_GALLERY_REQUEST, NEW_GALLERY_SUCCESS, NEW_GALLERY_FAIL, DELETE_GALLERY_SUCCESS, DELETE_GALLERY_FAIL, DELETE_GALLERY_REQUEST } from "../constants/galleryConstant";
+import { url } from "../../config";
 
 export const getAllGallery=(limit)=>dispatch=>{
     let link;
     dispatch({type:ALL_GALLERY_REQUEST});
     if(limit){
-        link =`/api/v1/gallery?limit=${limit}`
+        link =url+`/api/v1/gallery?limit=${limit}`
     }
     else{
-        link ="/api/v1/gallery"
+        link =url+"/api/v1/gallery"
     }
     
     axios.get(link).then(resp=>
@@ -20,7 +21,7 @@ export const getAllGallery=(limit)=>dispatch=>{
 
 export const newGallery=(data)=>dispatch=>{
     dispatch({type:NEW_GALLERY_REQUEST});
-    let link ="/api/v1/gallery/new";
+    let link =url+"/api/v1/gallery/new";
     const config = {
         headers: { "Content-Type": 'multipart/form-data' },
       };
@@ -34,7 +35,7 @@ export const newGallery=(data)=>dispatch=>{
 }
 export const deleteGallery=(id)=>dispatch=>{
     dispatch({type:DELETE_GALLERY_REQUEST});
-    let link ="/api/v1/gallery/"+id;
+    let link =url+"/api/v1/gallery/"+id;
     axios.delete(link).then(resp=>{
         dispatch({type:DELETE_GALLERY_SUCCESS,payload:resp.data}) 
         dispatch(getAllGallery());

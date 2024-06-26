@@ -8,6 +8,7 @@ import DeleteDeptDialog from './deleteDialogs/DeleteDeptDialog';
 import TdEdit from './TdEdit';
 import { UPDATE_DEPT_RESET } from '../../../state/constants/deptConstant';
 import UpDeptImgModal from './updateImgModals/UpDeptImgModal';
+import { url } from '../../../config';
 
 const CourseTable = () => {
     const dispatch = useDispatch();
@@ -81,7 +82,7 @@ const CourseTable = () => {
                                 </TdEdit>
                                 <td>
                                     <Image
-                                        src={course.deptPic}
+                                        src={url+course.deptPic}
                                         data-bs-toggle="modal" data-bs-target="#deptPicModal"
                                         alt={`${course.dept} Department`}
                                         style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '50%' }}

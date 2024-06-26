@@ -5,6 +5,7 @@ import { deleteGallery, getAllGallery } from '../../../state/actions/galleryActi
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import DeleteGalleryDialog from './deleteDialogs/DeleteGalleryDialog';
+import { url } from '../../../config';
 
 const GalleryItems = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const GalleryItems = () => {
                 <div className="delete-icon-container" data-bs-toggle="modal" data-bs-target="#deleteGalleryModal" onClick={() => handleDelete(item._id,item.title)}>
                   <FontAwesomeIcon icon={faTrash} className="delete-icon" />
                 </div>
-                <Card.Img variant="top" src={item.image} style={{ height: '300px' }} />
+                <Card.Img variant="top" src={url+item.image} style={{ height: '300px' }} />
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
                 </Card.Body>

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Image } from 'react-bootstrap';
 import { UPDATE_EVENTPIC_RESET } from '../../../../state/constants/eventConstant';
+import { url } from '../../../../config';
 
 function UpEventImgModal({ itemId, itemName, image, action, updatePicState }) {
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ function UpEventImgModal({ itemId, itemName, image, action, updatePicState }) {
           <div className="modal-body">
             <div className="row">
               <div className="col-12 text-center">
-                <Image src={image} ref={imageRef} className="img-fluid rounded" style={{ width: '400px', height: '400px' }} alt="Department Image" />
+                <Image src={url+image} ref={imageRef} className="img-fluid rounded" style={{ width: '400px', height: '400px' }} alt="Department Image" />
               </div>
               <div className="col-12 mt-3">
                 <label className="form-label">Choose a new image for {itemName}:</label>

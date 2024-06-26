@@ -14,6 +14,7 @@ import { getAllDepartment } from "../../state/actions/deptAction";
 import { getAllEvents } from "../../state/actions/eventAction";
 import { getAllGallery } from "../../state/actions/galleryAction";
 import { Link, NavLink } from "react-router-dom";
+import { url } from "../../config";
 
 const Home =()=>{
     const dispatch = useDispatch();
@@ -162,7 +163,7 @@ const Home =()=>{
                             <div className="card shadow p-3 bg-light">
                                 <Row>
                                     <Col xs={12}>
-                                        <Image src={events[0].images} fluid />
+                                        <Image src={url+events[0].images} fluid />
                                     </Col>
                                     <Col xs={12} className="mt-3">
                                         <span className="text-success h5">{changeDateFormat(events[0].eventDate)}</span><br/>
@@ -179,7 +180,7 @@ const Home =()=>{
                                         <div className="card shadow p-3 bg-light h-100">
                                             <Row>
                                                 <Col xs={12} md={4}>
-                                                    <Image className="h-100 w-100" src={event.images} fluid />
+                                                    <Image className="h-100 w-100" src={url+event.images} fluid />
                                                 </Col>
                                                 <Col xs={12} md={8} className="mt-3">
                                                     <span className="text-success h5">{changeDateFormat(event.eventDate)}</span><br/>
@@ -237,7 +238,7 @@ const Home =()=>{
                                 gallery && gallery.map((galleryItem)=>(
                                     <Col xs={6} md={3} className="p-2">
                                         <div className="card w-100 h-100">
-                                            <img className="w-100 h-100 p-0" src={galleryItem.image} />
+                                            <img className="w-100 h-100 p-0" src={url+galleryItem.image} />
                                             
                                         </div>
                                     </Col>

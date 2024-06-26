@@ -6,6 +6,7 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import PageHero from "../layout/header/pageHero";
 import './gallery.css'
 import { getAllGallery } from '../../state/actions/galleryAction';
+import { url } from "../../config";
 
 const GalleryPage = () => {
   const dispatch = useDispatch();
@@ -32,10 +33,11 @@ const GalleryPage = () => {
 
   if(gallery){
     images=gallery.map(galleryItem=>({
-      original: galleryItem.image,
-      thumbnail: galleryItem.image,
+      original: url+galleryItem.image,
+      thumbnail: url+galleryItem.image,
       description: galleryItem.title
     }))
+    console.log(images)
   }
   return (
     <div>

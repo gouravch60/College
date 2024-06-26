@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { getAllDepartment } from "../../state/actions/deptAction";
 import Button from 'react-bootstrap/Button';
 import DeptModal from "../snippets/DeptModal";
+import { url } from "../../config";
 
 const Courses = (props) => {
     const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const Courses = (props) => {
                             <div className="h-100">
                                 <Card className='shadow card-hover h-100' onClick={() => callDeptModal(department)} data-bs-toggle="modal" data-bs-target="#deptModal">
                                     <div style={{ height: "200px", overflow: "hidden" }}>
-                                        <Card.Img variant="top" src={department.deptPic} style={{ height: "100%", objectFit: "cover" }} />
+                                        <Card.Img variant="top" src={url+department.deptPic} style={{ height: "100%", objectFit: "cover" }} />
                                     </div>
                                     <Card.Body>
                                         <Card.Title>{department.dept}</Card.Title>

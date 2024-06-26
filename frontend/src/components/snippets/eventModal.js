@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'react-bootstrap/esm/Image';
 import {Link} from 'react-router-dom' 
+import { url } from "../../config";
 
 function EventModal({eventSelected,changeDateFormat,formatDateToDayMonth}) {
     let [title,setTitle]=useState('');
@@ -34,7 +35,7 @@ function EventModal({eventSelected,changeDateFormat,formatDateToDayMonth}) {
                     </div>
                     <div class="modal-body row">
                         <div className='col-md-6 p-2'>
-                            <Image src={image} className="w-100 h-100" />
+                            <Image src={url+image} className="w-100 h-100" />
                         </div>
                         <div className='col-md-6' style={{overflowY:'auto'}}>
                             <p className='text-desc'>
