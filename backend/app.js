@@ -15,7 +15,7 @@ require('./config/dbconnection')
 
 app.use(cors({
     credentials: true
-    ,origin:'http://localhost:3000'
+    ,origin:'https://college-9yaq.onrender.com'
 }));
 
 const departmentRoute=require('./routes/departmentRoute')
@@ -24,7 +24,7 @@ const galleryRoute=require('./routes/galleryRoute')
 const enquiryRoute=require('./routes/enquiryRoute')
 const feedbackRoute=require('./routes/feedbackRoute')
 const userRoute=require('./routes/userRoute');
-const { loginUser } = require('./controller/userController');
+const { loginUser, dashboardCounts } = require('./controller/userController');
 const {adminAuth} = require('./middleware/adminAuth');
 
 const staticPath=path.join(__dirname,'public')
@@ -39,6 +39,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/api/v1/login',loginUser)
+app.get('/api/v1/dashboardCount',dashboardCounts)
 app.use('/api/v1',departmentRoute)
 app.use('/api/v1',eventRoute)
 app.use('/api/v1',galleryRoute)
