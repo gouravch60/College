@@ -28,7 +28,7 @@ function UpEventImgModal({ itemId, itemName, image, action, updatePicState }) {
   useEffect(() => {
     if (isUpdated) {
       inputRef.current.value=null;
-      imageRef.current.src=newPic;
+      imageRef.current.src=url+newPic;
       setTimeout(() => {
         setImage(null);
         dispatch({type:UPDATE_EVENTPIC_RESET})
