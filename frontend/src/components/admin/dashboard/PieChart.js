@@ -3,6 +3,7 @@ import { PieChart as RechartsPieChart, Pie, Tooltip, Legend, Cell } from 'rechar
 import { Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEnquiryCount } from '../../../state/actions/enquiryAction';
+import "./dashboard.css"
 
 const PieChart = () => {
   const dispatch = useDispatch()
@@ -17,8 +18,8 @@ const PieChart = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
   return (
     data&&
-    <Container>
-      <RechartsPieChart width={400} height={400}>
+    <Container class="dash-pie-container">
+      <RechartsPieChart height={400} width={400} >
         <Pie
           data={data}
           dataKey="value"
@@ -33,7 +34,9 @@ const PieChart = () => {
             ))}
         </Pie>
         <Tooltip />
-        <Legend />
+        <Legend 
+        wrapperStyle={{ fontSize: '12px' }}  // Decrease the font size
+      />
       </RechartsPieChart>
     </Container>
   );

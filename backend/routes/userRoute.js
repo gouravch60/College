@@ -4,7 +4,6 @@ const router=express.Router();
 
 router.post('/user',createUser)
 router.get('/user/loadUser',loadUser);
-router.get('/user/dashboardCount',dashboardCounts);
 router.get('/user/logout',logout);
 
 

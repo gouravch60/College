@@ -4,7 +4,7 @@ import { url } from "../../config";
 
 export const getDashboardCounts=()=>dispatch=>{
     dispatch({type:DASHBOARD_COUNT_REQUEST});
-    let link =url+"/api/v1/user/dashboardCount/"
+    let link =url+"/api/v1/dashboardCount/"
     axios.get(link).then(resp=>
         dispatch({type:DASHBOARD_COUNT_SUCCESS,payload:resp.data})    
     ).catch(err=>
