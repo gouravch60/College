@@ -45,7 +45,7 @@ app.use('/api/v1',eventRoute)
 app.use('/api/v1',galleryRoute)
 app.use('/api/v1',enquiryRoute)
 app.use('/api/v1',feedbackRoute)
-app.use('/api/v1',userRoute)
+app.use('/api/v1',adminAuth,userRoute)
 app.use(ErrorMiddleware)
 
 
