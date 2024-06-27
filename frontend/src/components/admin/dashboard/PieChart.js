@@ -23,7 +23,7 @@ const PieChart = () => {
         <Pie
           data={data}
           dataKey="value"
-          cx={200}
+          cx={150}
           cy={200}
           outerRadius={80}
           fill="#8884d8"
