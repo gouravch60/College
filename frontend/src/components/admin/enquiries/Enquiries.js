@@ -36,7 +36,8 @@ const Enquiries = () => {
     return (
         <div >
             <h2>Enquiries</h2>
-            <Table striped bordered hover style={{overflowX:'auto'}} >
+            <div style={{overflowX:'auto'}}>
+            <Table striped bordered hover >
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -60,6 +61,7 @@ const Enquiries = () => {
                     ))}
                 </tbody>
             </Table>
+            </div>
         </div>
     );
 };
