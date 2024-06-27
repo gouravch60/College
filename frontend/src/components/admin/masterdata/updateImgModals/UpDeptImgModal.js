@@ -28,8 +28,7 @@ function UpDeptImgModal({ itemId, itemName, image, action, updatePicState }) {
   useEffect(() => {
     if (isUpdated) {
       inputRef.current.value=null;
-      imageRef.current.src=newPic;
-      console.log(newPic);
+      imageRef.current.src=url+newPic;
       setTimeout(() => {
         setDeptPic(null);
         dispatch({type:UPDATE_DEPTPIC_RESET})
