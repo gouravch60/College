@@ -34,9 +34,9 @@ const Enquiries = () => {
     
 
     return (
-        <div>
+        <div >
             <h2>Enquiries</h2>
-            <Table striped bordered hover >
+            <Table striped bordered hover style={{overflowX:'auto'}} >
                 <thead>
                     <tr>
                         <th>Name</th>
