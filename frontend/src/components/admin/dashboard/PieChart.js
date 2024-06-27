@@ -14,7 +14,7 @@ const PieChart = () => {
   let {loading,enquiryCount,error} = useSelector(globalState=>globalState.enquiryCount)
   let data=enquiryCount.enquiryCount;
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const COLORS = ["#FF5733", "#33FF57", "#3357FF", "#FF33A6", "#FFD433", "#33FFF0"];
   return (
     data&&
     <Container>
@@ -33,7 +33,8 @@ const PieChart = () => {
             ))}
         </Pie>
         <Tooltip />
-        <Legend />
+        <Legend className="small" />
+          <p className="text-secondary">Enquiries</p>
       </RechartsPieChart>
     </Container>
   );
