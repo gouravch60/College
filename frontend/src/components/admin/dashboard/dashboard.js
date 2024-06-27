@@ -54,7 +54,7 @@ const Dashboard=()=>{
                 </div>
             </div>
             {/* Cards end */}
-            <div className="col-md-4 p-1">
+            <div className="col-md-4 p-md-1" style={{overflowX:'auto'}}>
                 <PieChart />
             </div>
             <div className="col-md-8 p-3" style={{overflowX:'auto'}}>
