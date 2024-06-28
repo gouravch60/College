@@ -4,6 +4,7 @@ import PageHero from "../layout/header/pageHero";
 import { useDispatch, useSelector } from 'react-redux';
 import { newFeedback } from '../../state/actions/feedbackAction';
 import { NEW_FEEDBACK_RESET } from '../../state/constants/feedbackConstant';
+import { toast } from 'react-toastify';
 
 const ContactUsPage = () => {
   const [name, setName] = useState('');
@@ -33,12 +34,12 @@ const ContactUsPage = () => {
 
   useEffect(()=>{
     if(success){
-      alert("Message sent successfully!");
+      toast.success("Feedback submitted successfully");
       dispatch({type:NEW_FEEDBACK_RESET})
       resetFeilds()
     }
     if(error){
-      alert("Some Error occured!");
+      toast.error("Some Error occured!");
       console.log(error);
     }
   },[error,success])
