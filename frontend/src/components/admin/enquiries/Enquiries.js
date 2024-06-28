@@ -35,30 +35,32 @@ const Enquiries = () => {
     return (
         <div>
             <h2>Enquiries</h2>
-            <Table striped bordered hover >
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Course</th>
-                        <th>Enquired</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {enquiryList.map((enquiry, index) => (
-                        <tr key={index}>
-                            <td>{enquiry.name}</td>
-                            <td>{enquiry.email}</td>
-                            <td>{enquiry.phone}</td>
-                            <td>{enquiry.course}</td>
-                            <td>
-                                <input type="checkbox" name="enquired" checked={enquiry.isEnquired} onClick={(event)=>{handleCheckbox(enquiry._id,event)}}/>
-                            </td>
+            <div style={{overflow-x:'hidden'}}>
+                <Table striped bordered hover >
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Enquired</th>
                         </tr>
-                    ))}
-                </tbody>
-            </Table>
+                    </thead>
+                    <tbody>
+                        {enquiryList.map((enquiry, index) => (
+                            <tr key={index}>
+                                <td>{enquiry.name}</td>
+                                <td>{enquiry.email}</td>
+                                <td>{enquiry.phone}</td>
+                                <td>{enquiry.course}</td>
+                                <td>
+                                    <input type="checkbox" name="enquired" checked={enquiry.isEnquired} onClick={(event)=>{handleCheckbox(enquiry._id,event)}}/>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            </div>
         </div>
     );
 };
