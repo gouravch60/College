@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllEnquiries, updateEnquiries } from '../../../state/actions/enquiryAction';
@@ -6,7 +6,6 @@ import { UPDATE_ENQUIRY_RESET } from '../../../state/constants/enquiryConstant';
 
 const Enquiries = () => {
     const dispatch = useDispatch();
-    let checkBox = useRef();
     const {updating,updated,updateErr} = useSelector(globalState => globalState.updateEnquiry);
 
     useEffect(() => {
@@ -27,16 +26,15 @@ const Enquiries = () => {
     const { loading, enquiries, error } = useSelector(globalState => globalState.enquiry);
     
     const enquiryList = enquiries.enquiries || [];
-    const handleCheckbox = (id)=>{
-        let data={isEnquired:checkBox.current.checked}
+    const handleCheckbox = (id,e)=>{
+        let data={isEnquired:e.target.checked}
         dispatch(updateEnquiries(id,data));
     }
     
 
     return (
-        <div >
+        <div>
             <h2>Enquiries</h2>
-            <div style={{overflowX:'auto'}}>
             <Table striped bordered hover >
                 <thead>
                     <tr>
@@ -55,13 +53,12 @@ const Enquiries = () => {
                             <td>{enquiry.phone}</td>
                             <td>{enquiry.course}</td>
                             <td>
-                                <input type="checkbox" checked={enquiry.isEnquired} ref={checkBox} onClick={()=>{handleCheckbox(enquiry._id)}}/>
+                                <input type="checkbox" name="enquired" checked={enquiry.isEnquired} onClick={(event)=>{handleCheckbox(enquiry._id,event)}}/>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </Table>
-            </div>
         </div>
     );
 };
