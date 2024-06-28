@@ -30,7 +30,7 @@ const NavbarComponent=()=>{
           <Nav.Link as={NavLink} onClick={handleCollapse} className={({ isActive }) => isActive ? "navLink activeNavLink" : "navLink"} to="/aboutus">About Us</Nav.Link>
           <Nav.Link as={NavLink} onClick={handleCollapse} className={({ isActive }) => isActive ? "navLink activeNavLink" : "navLink"} to="/gallery">Gallery</Nav.Link>
           <Nav.Link as={NavLink} onClick={handleCollapse} className={({ isActive }) => isActive ? "navLink activeNavLink" : "navLink"} to="/contactus">Contact Us</Nav.Link>
-          <Nav.Link className="d-md-none" to="/login">
+          <Nav.Link as={NavLink} className="d-md-none" to="/login">
             <FontAwesomeIcon icon={faUserAlt} />
             <span className="ms-1">Admin Panel</span>
           </Nav.Link>
