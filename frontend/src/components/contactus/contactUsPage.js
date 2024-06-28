@@ -94,7 +94,7 @@ const ContactUsPage = () => {
                 />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button variant="primary" className="float-end btn-dark" type="submit">
                 {loading?'Submiting':'Submit'}
               </Button>
             </Form>
