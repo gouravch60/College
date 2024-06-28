@@ -102,19 +102,19 @@ const dispatch=useDispatch();
                         </div>
                         <div className='col-md-6'>
                             <div className='form-group row p-3'>
-                                <input value={name} onChange={(e)=>(setName(e.target.value))} className='form-control col-12' placeholder='Enter your name*' />
+                                <input value={name} onChange={(e)=>(setName(e.target.value))} className='form-control col-12' placeholder='Enter your name*' required />
                             </div>
 
                             <div className='form-group row p-3'>
-                                <input value={phone} onChange={(e)=>(setPhone(e.target.value))}  className='form-control col-12' placeholder='Enter your Phone no.*' />
+                                <input value={phone} onChange={(e)=>(setPhone(e.target.value))}  className='form-control col-12' placeholder='Enter your Phone no.*' required />
                             </div>
 
                             <div className='form-group row p-3'>
-                                <input value={email} onChange={(e)=>(setEmail(e.target.value))} type="email" className='form-control col-12' placeholder='Enter your Email*' />
+                                <input value={email} onChange={(e)=>(setEmail(e.target.value))} type="email" className='form-control col-12' placeholder='Enter your Email*' required />
                             </div>
 
                             <div className='form-group row p-3'>
-                                <select value={course} className='form-control col-12' onChange={handleChange}>
+                                <select value={course} className='form-control col-12' onChange={handleChange} required>
                                     {/* <option value=''>Which course you are interested in?</option> */}
                                     {
                                         departments&&departments.map((department)=>(
